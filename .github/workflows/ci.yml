@@ -1,0 +1,13 @@
+name: Deploy to ECR
+on:
+  push:
+    branches: [ master ]    
+jobs:
+  build:
+    name: Build Image
+    runs-on: ubuntu-latest
+    steps:
+    - name: check out code
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        
