@@ -17,9 +17,9 @@ jobs:
   
     steps:
     - uses: actions/checkout@v2
-    - name: dockerlogin
-      run: |
-        docker login -u $username -p $password
+    #- name: dockerlogin
+    #  run: |
+    #    docker login -u $username -p $password
     - name: todays date
       id: date
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
