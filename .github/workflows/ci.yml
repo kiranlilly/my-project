@@ -25,7 +25,7 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
       
     - name: building docker image
-      run: docker build . --file Dockerfille --tag $username/python-api:${{ steps.date.outputs.date }}
+      run: docker build . --file Dockerfile --tag $username/python-api:${{ steps.date.outputs.date }}
     - name: pushing the image
       run: docker push $username/python-api:${{ steps.date.outputs.date }}
   
