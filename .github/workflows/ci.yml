@@ -28,7 +28,7 @@ jobs:
       run: docker build . --file Dockerfile --tag $username/python-api:${{ steps.date.outputs.date }}
     - name: pushing the image
       run: |
-        docker login -u --${{ secrets.AWS_ACCESS_KEY_ID }} -p --${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        docker login -u --${{ secrets.USERNAME }} -p --${{ secrets.PASSWORD }}
         docker push $username/python-api:${{ steps.date.outputs.date }}
   
     
