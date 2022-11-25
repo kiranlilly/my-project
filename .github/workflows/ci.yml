@@ -28,7 +28,7 @@ jobs:
       run: docker build . --file Dockerfile --tag $username/python-api:${{ steps.date.outputs.date }}
     - name: pushing the image
       run: |
-        docker login -u --${{ secrets.USERNAME }} -p --${{ secrets.PASSWORD }}
+        docker login -u --kiranabcd -p --kiran@123
         docker push $username/python-api:${{ steps.date.outputs.date }}
   
     
